@@ -1,0 +1,102 @@
+  /* custom css varaibles */
+  :root{
+    /* fonts */
+    --font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    --font-size: 15px;
+    /* colors */
+    /* ### Primary */
+    --linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);    
+    /* ### Neutral */
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --white:hsl(0, 0%, 100%);
+    --atributions:hsl(228, 45%, 44%);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+.app-wrapper{
+    padding: 2em 1em;
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--very-light-grayish-blue);
+}
+span {
+    color: var(--dark-grayish-blue);
+}
+/* header */
+.header{
+    margin: 2em auto;
+}
+.toggle-switch{
+    width: 50px;
+    height: 20px;
+    background-color: #000;
+    display: inline-block;
+}
+/* component */
+.component{
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+.component > span {
+    padding: 1em 0;
+    display: block;
+    border-bottom:1px solid var(--light-grayish-blue);
+}
+span.subscription{
+    padding: 0 0 .4em ;
+    font-size: 40px;
+}
+span.plan{
+    border: none;
+}
+.btn{
+    margin: 2em auto .5em;
+    padding: .7em;
+    width: 90%;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transform: .3s;
+    border: 1px solid transparent;
+    color: var(--white);
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+.btn:hover{
+    color: hsl(237, 63%, 64%);
+    background: transparent;
+    border: 1px solid var(--dark-grayish-blue);
+}
+.container:nth-child(){
+    color: var(--white);
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+
+/* attributions */
+.attribution {
+    margin:2em auto 1em;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: var(--atributions);
+}
+
+@media screen  and (min-width:1025px){
+    .container{
+        margin: 7em auto;
+    }
+}
