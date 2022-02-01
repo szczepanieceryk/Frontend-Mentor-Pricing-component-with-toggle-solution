@@ -8,7 +8,7 @@
     --linear-gradient-left: hsl(236, 72%, 79%);    
     --linear-gradient-right: hsl(237, 63%, 64%);    
     /* ### Neutral */
-    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --very-light-grayish-blue: hsl(240, 80%, 98%);
     --light-grayish-blue: hsl(234, 14%, 74%);
     --grayish-blue: hsl(233, 13%, 49%);
     --dark-grayish-blue: hsl(232, 13%, 33%);
@@ -31,46 +31,52 @@ body{
     min-height: 100vh;
     text-align: center;
     background-color: var(--very-light-grayish-blue);
-    position: relative;
 }
-.app-wrapper::before, .app-wrapper::after{
-    content:'';
-    position: absolute;
-    /* width: 100%;
-    height: 100%;  */
-    background-size: auto;
-}
-/* .app-wrapper::before{
-    background: url(./images/bg-top.svg) no-repeat top right;
-    top: 0;
-    left: 0;
-}
-.app-wrapper::after{
-    background: url(./images/bg-bottom.svg) no-repeat bottom left;
-    top: 0;
-    left: 0;
-} */
+
 
 .container{
     max-width: 1200px;
 }
+
 /* header */
 .header{
-    margin: 2em auto;
+    margin: 2em auto 4em;
+    color: var(--light-grayish-blue);
 }
-.title{
-    margin-bottom: 1em;
-    display: block;
-}
-/* toggle switch */
-.form-check-input{
-    margin:.2em;
-    display: block;
-    cursor: pointer;
-}
-.form-check, .form-switch{
+.plan-time{
     display: inline-block;
 }
+.title{
+    margin-bottom: 2em;
+    display: block;
+    color: var(--dark-grayish-blue);
+}
+
+.toggle-switch{
+    margin: 0 1em;
+    height: 30px;
+    width: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    background:linear-gradient(90deg, var(--linear-gradient-left), var(--linear-gradient-right));
+    cursor: pointer;
+}
+.switch{
+    margin: 2px;
+    height: 80%;
+    width:40%;
+    position: absolute;
+    border-radius: 50px;
+    right: 3%;
+    transition: right .3s ease-out;
+    background-color: var(--white);
+}
+.switch.toggle{
+    right: 50%;
+}
+
 /* component */
 .component{
     margin: 1em auto;
@@ -79,6 +85,8 @@ body{
     border-radius: 8px;
     color: var(--grayish-blue);
     background-color: var(--white);
+    box-shadow: 0px 5px 10px 2px #ddd;
+    z-index: 10;
 }
 .component > span {
     padding: 1em 0;
@@ -90,6 +98,7 @@ span.subscription{
     font-size: 50px;
 }
 span.plan{
+    letter-spacing: 1px;
     border: none;
 }
 .btn{
@@ -138,7 +147,8 @@ span.plan{
 
 @media screen  and (min-width:1025px){
     .container{
-        margin: 7em auto;
+        margin-bottom:5em ;
+        display: block;
     }
     [middle]{
         height: 105%;
